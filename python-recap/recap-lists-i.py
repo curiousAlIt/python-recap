@@ -15,7 +15,7 @@ l = ['eggs','milk', 'cucumbers']
 print(l)
 
 # so now, we can create different list
-# now, we will lear how to get the length of list
+# now, we will learn how to get the length of list
 # we use the function len() 
 #
 #
@@ -77,3 +77,5 @@ print(c)
 
 print('a added to l: ')
 print(d)
+
+
