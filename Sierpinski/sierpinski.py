@@ -17,8 +17,10 @@ def mid_point(a, b, c, d, r):
 
     return x,y
 
+rr = 0.266
+nump = 5
 
-triangle = True
+triangle = False
 square = False
 cir = True
 
@@ -34,8 +36,7 @@ if square:
 
 if cir:
 
-    nump = 15
-    th = np.linspace(0, 2*np.pi, nump)
+    th = np.linspace(0, 2*np.pi, nump+1)
     anchors_x = 50 + 50 * np.cos(th)
     anchors_y = 50 + 50 * np.sin(th)
 
@@ -57,7 +58,7 @@ hy = [None] * num_loops
 for k in range (0,num_loops):
 
     i = random.randint(0,len(anchors_x)-1)
-    new_x, new_y = mid_point(current_x, current_y, anchors_x[i], anchors_y[i], 0.8)
+    new_x, new_y = mid_point(current_x, current_y, anchors_x[i], anchors_y[i], rr)
 
     #plt.scatter(new_x, new_y, marker='.', color='k')
 
