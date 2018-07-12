@@ -17,7 +17,7 @@ def mid_point(a, b, c, d, r):
 
     return x,y
 
-rr = 0.266
+rr = 0.666
 nump = 5
 
 triangle = False
