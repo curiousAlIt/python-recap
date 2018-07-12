@@ -1,8 +1,16 @@
 import matplotlib.pyplot as plt
 import random
 import numpy as np
+import argparse
 
 plt.ion()
+
+prs = argparse.ArgumentParser()
+prs.add_argument('--nump', required = False, default = 3, type = int)
+prs.add_argument('--ratio', required = False, default = 0.5, type = float)
+
+nump = prs.parse_args().nump
+rr = prs.parse_args().ratio
 
 def mid_point(a, b, c, d, r):
     """
@@ -17,8 +25,6 @@ def mid_point(a, b, c, d, r):
 
     return x,y
 
-rr = 0.666
-nump = 5
 
 triangle = False
 square = False
