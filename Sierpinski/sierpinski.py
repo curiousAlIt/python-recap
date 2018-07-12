@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import random
+import numpy as np
 
 plt.ion()
 
@@ -17,12 +18,34 @@ def mid_point(a, b, c, d, r):
     return x,y
 
 
+triangle = True
+square = False
+cir = True
 
-anchors_x = [0, 100, 50]
-anchors_y = [0, 0, 70]
+if triangle:
+    
+    anchors_x = [0, 100, 50]
+    anchors_y = [0, 0, 70]
+
+if square:
+
+    anchors_x = [0, 100, 100, 0, 50, 150]
+    anchors_y = [0, 0, 100, 100, 150, 150]
+
+if cir:
+
+    nump = 15
+    th = np.linspace(0, 2*np.pi, nump)
+    anchors_x = 50 + 50 * np.cos(th)
+    anchors_y = 50 + 50 * np.sin(th)
 
 plt.figure()
 plt.scatter(anchors_x, anchors_y, marker='o', color='r')
+plt.axis('equal')
+
+plt.figure()
+plt.scatter(anchors_x, anchors_y, marker='o', color='r')
+plt.axis('equal')
 
 current_x = 0
 current_y = 0
@@ -34,7 +57,7 @@ hy = [None] * num_loops
 for k in range (0,num_loops):
 
     i = random.randint(0,len(anchors_x)-1)
-    new_x, new_y = mid_point(current_x, current_y, anchors_x[i], anchors_y[i], 0.5)
+    new_x, new_y = mid_point(current_x, current_y, anchors_x[i], anchors_y[i], 0.8)
 
     #plt.scatter(new_x, new_y, marker='.', color='k')
 
