@@ -1,4 +1,7 @@
 import matplotlib.pyplot as plt
+import random
+
+plt.ion()
 
 def mid_point(a, b, c, d, r):
     """
@@ -14,24 +17,24 @@ def mid_point(a, b, c, d, r):
     return x,y
 
 
-a = 6
-b = 5
-c = 94
-d = 36
 
-plt.ion()
+anchors_x = [10, 70, 40]
+anchors_y = [10, 10, 40]
+
 plt.figure()
-plt.scatter(a,b, marker='*', color = 'r')
-plt.scatter(c,d, marker='+', color='g')
+plt.scatter(anchors_x, anchors_y, marker='o', color='r')
 
-for k in range (1,10):
-    
-    xx,yy = mid_point(a,b,c,d, k/10.0)
-    print('K is now %d - for this k the mid point is %f , %f ' % (k,xx,yy))
-    
-    plt.scatter(xx, yy, marker ='x', color = 'b')
+current_x = 0
+current_y = 0
 
-print('Finished the loop')
+for k in range (0,4000):
 
+    i = random.randint(0,len(anchors_x)-1)
+    new_x, new_y = mid_point(current_x, current_y, anchors_x[i], anchors_y[i], 0.5)
+
+    plt.scatter(new_x, new_y, marker='.', color='k')
+
+    current_x = new_x
+    current_y = new_y
 
 
