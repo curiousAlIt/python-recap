@@ -23,7 +23,7 @@ if __name__=='__main__':
 
     L = [2, 4, 5, 8]
 
-    B = add_into_sorted(L, 4)
+    B = add_into_sorted(L, 5)
 
     print(f'Original L: {L}')
     print(f'After calling: {B}')
