@@ -30,23 +30,24 @@ a.append(22)
 print('the list a after we add:')
 print(a)
 
-# access to specific elements
-# in order to access an element we use its index
+# in order to access to specific terms in a list:
+# we use its index
 # the first element always has the index 0
-# example: if we want to access second element, we use this:
+# example: if we want to access the second element, we use this:
 #      (name of list)[1]
 print('The first item in a:')
 print(a[0])
 print('The second item in a:')
 print(a[1])
 print('The last item in a:')
-print(a[len(a)-1])
+last_index = len(a)-1
+print(a[last_index])
 
-# now we will concatenate the lists a and l
-# we use a new variable, like c, that equals to the list a followed by the list l
+# now we will concatenate the lists a and l:
+# we will use a new variable, like c, that equals to the list a followed by the list l
 # we write this as:
 #      c = a + l
-# if we swap the order - d = l + a, we will get a new list with the items in a, after
+# if we swap the order: d = l + a, we will get a new list with the items in a, after
 # the items in l
 c = a + l
 d = l + a
