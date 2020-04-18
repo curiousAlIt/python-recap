@@ -5,8 +5,9 @@ print('\n')
 # printing the variable
 #
 
+
 r = 2008
-n = 'Itamar'
+n = 'Itamar A'
 h = 'Israel'
 
 print(f'My name is {n} and I was born in {r}, and I live in {h}')
@@ -22,7 +23,7 @@ for k in range(0,11):
     b = k*k
 
     print(f'k = {k}  itamar-a = {a}  alma-b = {b}')
-    
+
 
 
 
